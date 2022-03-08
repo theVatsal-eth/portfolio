@@ -1,0 +1,54 @@
+/* Random Number Generator */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 160px);
+  /* border: 1px solid red; */
+}
+
+.countnumber {
+  font-size: 5rem;
+}
+
+.counterdiv {
+  /* margin: 0 auto; */
+  width: 40rem;
+  border: 1px solid var(--grey);
+  padding: 1rem;
+  background-color: #8775f5;
+  color: var(--white);
+  text-align: center;
+  border-radius: 40px;
+}
+
+.counterdiv > * {
+  margin-bottom: 2rem;
+}
+
+.count {
+  font-size: 4rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttons button {
+  width: 40%;
+  padding: 1rem;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
