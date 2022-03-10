@@ -1,19 +1,22 @@
 import React from "react";
 import styles from "../styles/Live.module.css";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 export default function Live() {
     const [search, setSearch] = useState('')
     const [users, setUser] = useState([])
     const [result, setResult] = useState([])
 
-    useEffect(async () => {
-        const res = await fetch('https://randomuser.me/api?results=50')
-        console.log(res)
-        const { results } = await res.json()
-        console.log(result)
-        setResult(results)
+    useEffect(() => {
+        console.log("hello")
+        async function main () {
+            const res = await fetch('https://randomuser.me/api?results=50')
+            console.log(res)
+            const { results } = await res.json()
+            console.log(results)
+            setResult(results)
+        }
+        main()
     },[])
 
     const userSearch = (value) => {
@@ -51,8 +54,8 @@ export default function Live() {
                         result.map( user => 
                             // ul.appendChild(li)
                             // console.log(user)
-                            (<li>
-                              <Image src={user.picture.large} height="50" width="50" alt={user.name.first} />
+                            (<li key={user.cell}>
+                              <img src={user.picture.large} alt={user.name.first} />
                               <div className={styles.userinfo}>
                                   <h4>{user.name.first} {user.name.last}</h4>
                                   <p>{user.location.city}, {user.location.country}</p>
