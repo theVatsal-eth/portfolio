@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Live.module.css";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Live() {
     const [search, setSearch] = useState('')
@@ -51,7 +52,7 @@ export default function Live() {
                             // ul.appendChild(li)
                             // console.log(user)
                             (<li>
-                              <img src={user.picture.large} alt={user.name.first} />
+                              <Image src={user.picture.large} height="50" width="50" alt={user.name.first} />
                               <div className={styles.userinfo}>
                                   <h4>{user.name.first} {user.name.last}</h4>
                                   <p>{user.location.city}, {user.location.country}</p>
