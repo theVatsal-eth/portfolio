@@ -7,7 +7,7 @@ export default function Home() {
     <div className={styles.projects}>
       <Link href='/random'><a className={styles.projectlinks}>Counter</a></Link>
       <Link href='/pal'><a className={styles.projectlinks}>Palindrome</a></Link>
-
+      <Link href='/live'><a className={styles.projectlinks}>Live User Filter</a></Link>
     </div>
   )
 }
